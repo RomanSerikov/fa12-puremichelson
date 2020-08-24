@@ -1,4 +1,5 @@
-parameter
+{
+  parameter
   (or (or (pair :transfer (address %from) (pair (address %to) (nat %value)))
           (pair :approve (address %spender) (nat %value)))
       (or (pair %getAllowance (pair (address :owner) (address :spender)) (contract nat))
@@ -315,4 +316,5 @@ code {
                         } ;
                 } ;
         } ;
+}
 }
